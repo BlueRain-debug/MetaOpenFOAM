@@ -13,7 +13,7 @@ LANGCHAIN_DB_ADD_SUMMARY=$(SRC_DIR)/Langchain_database_add_tutorial_summary.py
 LANGCHAIN_DB_ADD_TUTORIAL=$(SRC_DIR)/Langchain_database_add_tutorial.py
 LANGCHAIN_DB_ADD_COMMAND=$(SRC_DIR)/Langchain_database_add_command.py
 LANGCHAIN_DB_ADD_ALLRUN=$(SRC_DIR)/Langchain_database_add_allrun.py
-# METAOPENFOAM_V2=$(SRC_DIR)/metaOpenfoam_v2.py
+METAOPENFOAM_V2=$(SRC_DIR)/metaOpenfoam_v2.py
 # PARAMETAOPENFOAM=$(SRC_DIR)/ParaMetaOpenfoam.py
 # POSTMETAOPENFOAM=$(SRC_DIR)/PostMetaOpenfoam.py
 OPTMETAOPENFOAM=$(SRC_DIR)/OptMetaOpenfoam.py
@@ -52,8 +52,13 @@ run_db_add:
 # Run metaOpenfoam_v2.py to execute the main program
 run_main:
 	@echo "Running metaOpenfoam_v2.py to execute the main program..."
+	$(PYTHON) $(METAOPENFOAM_V2)
+
+# Run OptMetaOpenfoam.py to execute the main program
+run_optmain:
+	@echo "Running OptMetaOpenfoam.py to execute the main program..."
 	$(PYTHON) $(OPTMETAOPENFOAM)
-	
+
 # Clean up generated files (if needed)
 clean:
 	@echo "Cleaning up..."
