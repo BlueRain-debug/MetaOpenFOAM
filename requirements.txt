@@ -3,4 +3,5 @@ langchain==0.3.23
 langchain_community==0.3.21
 langchain_huggingface
 langchain_deepseek==0.1.3
+sentence-transformers
 vtk>=9.0
